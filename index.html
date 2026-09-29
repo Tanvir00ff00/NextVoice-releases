@@ -109,6 +109,35 @@
   .meta { margin-top:14px; font-size:13.5px; color:var(--text-3); }
   .meta b { color:var(--text-2); font-weight:600; }
 
+  .inapp {
+    margin:22px auto 0; max-width:560px; padding:14px 18px; border-radius:14px; text-align:left;
+    background:rgba(255,184,77,.08); border:1px solid rgba(255,184,77,.32);
+    color:var(--text-2); font-size:14.5px;
+  }
+  .inapp b { color:var(--amber); }
+  .inapp[hidden] { display:none; }
+  .help {
+    margin:22px auto 0; max-width:560px; text-align:left;
+    background:var(--surface-1); border:1px solid var(--hairline); border-radius:14px;
+  }
+  .help summary {
+    cursor:pointer; padding:14px 18px; font-weight:600; font-size:15px; color:var(--text);
+    list-style:none;
+  }
+  .help summary::-webkit-details-marker { display:none; }
+  .help summary::before { content:"+"; display:inline-block; width:20px; color:var(--iris); font-weight:700; }
+  .help[open] summary::before { content:"\2212"; }
+  .helpbody { padding:0 18px 18px; color:var(--text-2); font-size:14.5px; }
+  .helpbody p { margin:0 0 10px; }
+  .helpbody ol { margin:0 0 14px; padding-left:22px; }
+  .helpbody li { margin:0 0 6px; }
+  .helpbody b { color:var(--text); }
+  .copybtn {
+    padding:9px 20px; border-radius:999px; cursor:pointer; font-family:inherit; font-size:14px; font-weight:600;
+    background:var(--surface-3); color:var(--text); border:1px solid var(--hairline-strong);
+  }
+  .copybtn:hover { border-color:var(--iris); }
+
   /* -------------------------------------------------------------- blocks */
   section { padding:52px 0; border-top:1px solid var(--hairline); }
   h2 { margin:0 0 8px; font-size:14px; letter-spacing:.06em; color:var(--iris); font-weight:700; }
@@ -222,7 +251,7 @@
     </div>
 
     <div class="cta">
-      <a class="btn" href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/latest/download/nextvoice-latest.apk" download>
+      <a class="btn" id="get" href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/latest/download/nextvoice-latest.apk">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/>
@@ -234,6 +263,36 @@
         <span class="bn">সংস্করণ <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; অ্যান্ড্রয়েড ১৪+</span>
         <span class="en">Version <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; Android 14+</span>
       </p>
+
+      <div class="inapp" id="inapp" hidden>
+        <span class="bn"><b>আপনি অন্য অ্যাপের ভেতরের ব্রাউজারে আছেন।</b> ডাউনলোড ঠিকমতো শেষ নাও হতে পারে। ওপরের কোণের <b>⋮</b> চেপে <b>Chrome-এ খুলুন</b> বেছে নিন, অথবা নিচের বোতামে লিঙ্ক কপি করে Chrome-এ পেস্ট করুন।</span>
+        <span class="en"><b>You are inside another app&rsquo;s browser.</b> The download may not finish properly here. Tap <b>⋮</b> in the top corner and choose <b>Open in Chrome</b>, or copy the link with the button below and paste it into Chrome.</span>
+      </div>
+
+      <details class="help" id="help">
+        <summary><span class="bn">ডাউনলোড ১০০% হয়ে আটকে গেছে?</span><span class="en">Download stuck at 100%?</span></summary>
+        <div class="helpbody">
+          <p>
+            <span class="bn">চিন্তা নেই — ফাইলটি আসলে নেমে গেছে। কিছু ফোনে ব্রাউজারের ডাউনলোড পর্দা শেষ হলেও বন্ধ হয় না। এভাবে এগিয়ে যান:</span>
+            <span class="en">Don&rsquo;t worry &mdash; the file has actually finished downloading. On some phones the browser&rsquo;s download screen does not close by itself. Carry on like this:</span>
+          </p>
+          <ol class="bn">
+            <li>পর্দার ওপরের <b>✕</b> চেপে ডাউনলোডের পর্দাটি বন্ধ করুন।</li>
+            <li>ফোনের <b>Files</b> (ফাইল ম্যানেজার) খুলে <b>Downloads</b> ফোল্ডারে যান, অথবা নোটিফিকেশন নামিয়ে <b>ডাউনলোড সম্পন্ন</b> চাপুন।</li>
+            <li><b>nextvoice-latest.apk</b>-তে ট্যাপ করে <b>ইনস্টল</b> চাপুন। ব্রাউজার থেকে ইনস্টলের অনুমতি চাইলে দিন।</li>
+            <li>তবুও না হলে লিঙ্কটি কপি করে <b>Chrome</b>-এ খুলে আবার ডাউনলোড করুন।</li>
+          </ol>
+          <ol class="en">
+            <li>Tap the <b>✕</b> at the top to close the download screen.</li>
+            <li>Open <b>Files</b> on your phone and go to <b>Downloads</b>, or pull down the notifications and tap <b>Download complete</b>.</li>
+            <li>Tap <b>nextvoice-latest.apk</b>, then <b>Install</b>. If it asks to allow installs from the browser, allow it.</li>
+            <li>If it still does not work, copy the link, open it in <b>Chrome</b> and download again.</li>
+          </ol>
+          <button class="copybtn" id="copylink" type="button">
+            <span class="bn">লিঙ্ক কপি করুন</span><span class="en">Copy link</span>
+          </button>
+        </div>
+      </details>
     </div>
   </header>
 
@@ -517,6 +576,34 @@
   if (wanted === 'en' || wanted === 'bn') set(wanted);
   document.getElementById('lang').addEventListener('click', function () {
     set(root.getAttribute('data-lang') === 'bn' ? 'en' : 'bn');
+  });
+
+  // Messenger, Facebook, Instagram and similar apps open links in their own small
+  // browser, where an APK download often never completes. Say so, and how to get out.
+  var agent = navigator.userAgent || '';
+  if (/FBAN|FBAV|FB_IAB|Messenger|Instagram|Snapchat|TikTok|Line\/|Twitter|; wv\)/i.test(agent)) {
+    document.getElementById('inapp').hidden = false;
+    document.getElementById('help').open = true;
+  }
+
+  // After the download starts, show what to do next; the page stays open behind it.
+  document.getElementById('get').addEventListener('click', function () {
+    setTimeout(function () { document.getElementById('help').open = true; }, 2500);
+  });
+
+  document.getElementById('copylink').addEventListener('click', function () {
+    var link = location.href.split('#')[0].split('?')[0];
+    var done = function () {
+      var button = document.getElementById('copylink');
+      var old = button.innerHTML;
+      button.textContent = root.getAttribute('data-lang') === 'bn' ? 'কপি হয়েছে ✓' : 'Copied ✓';
+      setTimeout(function () { button.innerHTML = old; }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(link).then(done, function () { window.prompt('Copy this link', link); });
+    } else {
+      window.prompt('Copy this link', link);
+    }
   });
 })();
 </script>
