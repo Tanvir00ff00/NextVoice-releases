@@ -12,11 +12,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NextVoice — speak anywhere, in any script</title>
-<meta name="description" content="Speak Bengali or English and get clean text in any app. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
+<meta name="description" content="Speak Bengali or English and get clean text in any app, even with no internet. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
 <link rel="canonical" href="https://tanvir00ff00.github.io/NextVoice-releases/">
 
 <meta property="og:title" content="NextVoice — speak anywhere, in any script">
-<meta property="og:description" content="Speak Bengali or English and get clean text in any app. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
+<meta property="og:description" content="Speak Bengali or English and get clean text in any app, even with no internet. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="NextVoice">
 <meta property="og:url" content="https://tanvir00ff00.github.io/NextVoice-releases/">
@@ -26,7 +26,7 @@
 <meta property="og:image:alt" content="NextVoice: speak anywhere, in any script">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NextVoice — speak anywhere, in any script">
-<meta name="twitter:description" content="Speak Bengali or English and get clean text in any app. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
+<meta name="twitter:description" content="Speak Bengali or English and get clean text in any app, even with no internet. A free voice keyboard and dictation bubble for Android, with Avro-style Bengali typing.">
 <meta name="twitter:image" content="https://tanvir00ff00.github.io/NextVoice-releases/og.png">
 <meta name="theme-color" content="#0B0D12">
 
@@ -133,6 +133,31 @@
   }
   .note b { color:var(--amber); }
 
+  .why { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+  .why .card { position:relative; }
+  .why .card h3 { font-size:17px; }
+  .badge {
+    display:inline-block; margin-bottom:12px; padding:3px 10px; border-radius:999px;
+    font-size:11.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    background:rgba(91,240,180,.12); color:var(--mint); border:1px solid rgba(91,240,180,.28);
+  }
+  .ways { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+  .way {
+    background:var(--surface-1); border:1px solid var(--hairline);
+    border-radius:var(--radius); padding:24px;
+  }
+  .way h3 { margin:0 0 4px; font-size:17px; }
+  .way .sub { margin:0 0 16px; color:var(--text-3); font-size:13.5px; }
+  .way ol { margin:0; padding:0 0 0 20px; color:var(--text-2); font-size:14.5px; }
+  .way li { margin:0 0 8px; }
+  .way li b { color:var(--text); }
+  .tips { margin-top:22px; display:grid; gap:10px; }
+  .tip {
+    padding:14px 18px; border-radius:14px; background:var(--surface-2);
+    border:1px solid var(--hairline); color:var(--text-2); font-size:14.5px;
+  }
+  .tip b { color:var(--iris); }
+
   footer { padding:40px 0 56px; text-align:center; color:var(--text-3); font-size:13px; border-top:1px solid var(--hairline); }
   footer a { color:var(--text-2); }
 
@@ -188,6 +213,85 @@
   </header>
 
   <section>
+    <h2>Why NextVoice</h2>
+    <p class="lead">Typing on a phone is slow. Talking isn&rsquo;t &mdash; and now it works everywhere, even offline.</p>
+    <div class="grid why">
+      <div class="card">
+        <span class="badge">New in 1.0</span>
+        <h3>Works with no internet</h3>
+        <p>On a bus, in a village, on a weak connection: the microphone still listens. English uses the speech engine built into your phone, and Bangla uses a small model the app downloads once. What you say never leaves the phone.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🇧🇩</div>
+        <h3>Made for Bengali</h3>
+        <p>Speak Bangla with English words in it and each word stays in its own script. Type with Avro-style phonetic Bengali or a letters keyboard laid out like Gboard&rsquo;s, with a Bangla dictionary for suggestions.</p>
+      </div>
+      <div class="card">
+        <div class="ico">⚡</div>
+        <h3>Much faster than typing</h3>
+        <p>Most people speak far quicker than they can type on a small screen. Your words appear in the field while you talk, then are tidied when you stop.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🎁</div>
+        <h3>Free, and ready on install</h3>
+        <p>No account, no sign-up, no key to find. Install it, choose Bengali or English, follow the short guided setup and start speaking. Add your own key later only if you dictate a great deal.</p>
+      </div>
+      <div class="card">
+        <div class="ico">📱</div>
+        <h3>Works in every app</h3>
+        <p>WhatsApp, Messenger, Gmail, Facebook, notes, browsers &mdash; anywhere a cursor blinks. Use it as your keyboard, or as a floating bubble on top of another keyboard.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🔒</div>
+        <h3>Careful with what you say</h3>
+        <p>Voice is switched off in password fields. NextVoice has no server and keeps no copy of your audio or words. Offline dictation stays entirely on your phone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to use it</h2>
+    <p class="lead">Three ways to speak. Pick whichever suits the moment.</p>
+    <div class="ways">
+      <div class="way">
+        <h3>With the keyboard</h3>
+        <p class="sub">The easiest way. Nothing floating on screen.</p>
+        <ol>
+          <li>Tap any text box, then press the <b>globe key</b> until <b>NextVoice</b> is selected.</li>
+          <li>Tap the <b>microphone</b> on the right of the top strip.</li>
+          <li><b>Speak.</b> The words appear in the field as you talk.</li>
+          <li>Tap the microphone again, or just stop talking. The text is finished for you.</li>
+        </ol>
+      </div>
+      <div class="way">
+        <h3>With the floating bubble</h3>
+        <p class="sub">Optional. For when you prefer another keyboard.</p>
+        <ol>
+          <li>Switch it on from the home screen and allow the few extra permissions it explains, one at a time.</li>
+          <li>Tap a text box in any app. The <b>bubble</b> appears.</li>
+          <li><b>Tap it, speak,</b> and tap again. The text is pasted where your cursor is.</li>
+        </ol>
+      </div>
+      <div class="way">
+        <h3>Without internet</h3>
+        <p class="sub">Set up once, then it just works.</p>
+        <ol>
+          <li>Open <b>Settings &rarr; Voice Keyboard &rarr; Voice typing without internet</b>.</li>
+          <li>Tap <b>Offline Bangla</b> to download it once (about 94&nbsp;MB, best over Wi-Fi).</li>
+          <li>Leave the mode on <b>Automatic</b>. When there is no connection, the microphone listens on the phone by itself.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="tips">
+      <div class="tip"><b>Type Bengali.</b> Press the globe key to move between English, phonetic Bengali (type <i>ami</i>, get আমি) and the Bengali letters keyboard.</div>
+      <div class="tip"><b>Rewrite anything.</b> Select text in any app, open the toolbar (the four squares) and choose AI help to fix grammar, change the tone or translate.</div>
+      <div class="tip"><b>Choose how it writes.</b> Exactly as you said it, polished, or as bullet notes &mdash; set the style under Settings. Offline text is written exactly as heard.</div>
+      <div class="tip"><b>Lost? Ask the app.</b> A short tip appears the first time you open each screen, in your language, and Settings &rarr; About can show them again.</div>
+    </div>
+  </section>
+
+  <section>
     <h2>What it does</h2>
     <p class="lead">Dictation that respects how people actually talk.</p>
     <div class="grid">
@@ -227,6 +331,11 @@
         <p>Talk in Bengali and receive English, or the other way round — in whichever writing style you chose.</p>
       </div>
       <div class="card">
+        <div class="ico">📴</div>
+        <h3>Offline, when you need it</h3>
+        <p>No signal? The microphone listens on the phone itself. It goes offline automatically when the connection drops, or you can choose always or never.</p>
+      </div>
+      <div class="card">
         <div class="ico">⬆️</div>
         <h3>Updates itself</h3>
         <p>New versions arrive in the app with their release notes. You will not need this page again.</p>
@@ -240,8 +349,8 @@
     <ol class="steps">
       <li><b>Download the APK</b> using the button above.</li>
       <li><b>Open it.</b> Android will ask whether to allow installs from your browser — this is normal for an app that does not come from the Play Store. Allow it, then install.</li>
-      <li><b>Grant the permissions</b> the setup screen asks for. Each one is explained there; the app cannot listen or paste without them.</li>
-      <li><b>Start dictating.</b> It works straight away &mdash; no account or key needed. If you would rather use your own quota, add a Groq key in Settings &rarr; AI Model (free at <a href="https://console.groq.com/keys">console.groq.com/keys</a>), or a Gemini key from <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>.</li>
+      <li><b>Choose Bengali or English</b> on the first screen, then follow the short guided setup: microphone, notifications, turn the keyboard on and choose it. Steps are explained one at a time in your language, and any can wait. The floating bubble is optional and asks for its extra permissions only if you want it.</li>
+      <li><b>Start dictating.</b> It works straight away &mdash; no account or key needed. If you dictate a lot, add your own free key in Settings &rarr; Gemini Keys (from <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>) or a Groq key from <a href="https://console.groq.com/keys">console.groq.com/keys</a>; yours is used first.</li>
     </ol>
 
     <div class="note">
@@ -253,17 +362,19 @@
 
   <section>
     <h2>Where your words go</h2>
-    <p class="lead">Sent to the AI service, not stored by us.</p>
+    <p class="lead">Offline it stays on your phone. Online it goes to the AI service, not to us.</p>
     <p style="color:var(--text-2);max-width:660px;margin:0">
-      Your recording is sent to Groq, which runs the Whisper speech model, and the text you get back
-      may be sent to a text model there to be polished or rewritten. NextVoice has no server of its
-      own and does not keep your audio or your words. Signing in with Google is optional and only
-      backs your settings up to a private document that only you can read.
+      With no internet, or when you choose offline, your voice is recognised on the phone and
+      nothing is sent anywhere. Online, your recording goes to the AI speech service that does the
+      listening (Google Gemini, or Whisper on Groq), and the text may be sent to a text model to be
+      polished or rewritten. NextVoice has no server of its own and does not keep your audio or your
+      words. Signing in with Google is optional and only backs your settings up to a private
+      document that only you can read.
     </p>
     <p style="color:var(--text-2);max-width:660px;margin:14px 0 0">
-      The app ships with a shared key so it works on install, which means every install draws on the
-      same free allowance. If you dictate a lot, or it says the limit was reached, add your own key
-      in Settings. Gemini and NVIDIA are available as optional alternatives.
+      The app carries several built-in Gemini keys and switches between them, so it works on install
+      and every install shares the same free allowance. If you dictate a lot, or it says the limit
+      was reached, add your own key in Settings. Groq and NVIDIA are available as optional alternatives.
     </p>
   </section>
 
