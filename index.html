@@ -171,7 +171,7 @@
         Download for Android
       </a>
       <p class="meta">
-        Version <b>0.8.3</b> &nbsp;·&nbsp; 5.5 MB &nbsp;·&nbsp; 26 August 2026 &nbsp;·&nbsp; Android 14+
+        Version <b>0.9.0</b> &nbsp;·&nbsp; 5.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; Android 14+
       </p>
     </div>
   </header>
@@ -220,7 +220,7 @@
       <li><b>Download the APK</b> using the button above.</li>
       <li><b>Open it.</b> Android will ask whether to allow installs from your browser — this is normal for an app that does not come from the Play Store. Allow it, then install.</li>
       <li><b>Grant the permissions</b> the setup screen asks for. Each one is explained there; the app cannot listen or paste without them.</li>
-      <li><b>Add a Gemini API key.</b> Get a free one at <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> and paste it into Settings. Transcription runs on your own key, so nothing goes through anyone else's server.</li>
+      <li><b>Start dictating.</b> It works straight away &mdash; no account or key needed. If you would rather use your own quota, add a Groq key in Settings &rarr; AI Model (free at <a href="https://console.groq.com/keys">console.groq.com/keys</a>), or a Gemini key from <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>.</li>
     </ol>
 
     <div class="note">
@@ -232,11 +232,17 @@
 
   <section>
     <h2>Where your words go</h2>
-    <p class="lead">Straight to Google, on your own key.</p>
+    <p class="lead">Sent to the AI service, not stored by us.</p>
     <p style="color:var(--text-2);max-width:660px;margin:0">
-      Audio is sent to Google Gemini for transcription using the API key you provide, and is not
-      stored by NextVoice. Your key is kept encrypted on your device. Signing in with Google is
-      optional and only backs your settings up to a private document that only you can read.
+      Your recording is sent to Groq, which runs the Whisper speech model, and the text you get back
+      may be sent to a text model there to be polished or rewritten. NextVoice has no server of its
+      own and does not keep your audio or your words. Signing in with Google is optional and only
+      backs your settings up to a private document that only you can read.
+    </p>
+    <p style="color:var(--text-2);max-width:660px;margin:14px 0 0">
+      The app ships with a shared key so it works on install, which means every install draws on the
+      same free allowance. If you dictate a lot, or it says the limit was reached, add your own key
+      in Settings. Gemini and NVIDIA are available as optional alternatives.
     </p>
   </section>
 
