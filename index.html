@@ -115,7 +115,13 @@
     color:var(--text-2); font-size:14.5px;
   }
   .inapp b { color:var(--amber); }
-  .inapp[hidden] { display:none; }
+  .inapp[hidden], .started[hidden] { display:none; }
+  .started {
+    margin:18px auto 0; max-width:560px; padding:12px 18px; border-radius:14px; text-align:left;
+    background:rgba(91,240,180,.08); border:1px solid rgba(91,240,180,.30);
+    color:var(--text-2); font-size:14.5px;
+  }
+  .started b { color:var(--mint); }
   .help {
     margin:22px auto 0; max-width:560px; text-align:left;
     background:var(--surface-1); border:1px solid var(--hairline); border-radius:14px;
@@ -251,7 +257,7 @@
     </div>
 
     <div class="cta">
-      <a class="btn" id="get" href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/latest/download/nextvoice-latest.apk">
+      <a class="btn" id="get" href="nextvoice-latest.apk" download="NextVoice-1.0.0.apk">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/>
@@ -262,6 +268,11 @@
       <p class="meta">
         <span class="bn">সংস্করণ <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; অ্যান্ড্রয়েড ১৪+</span>
         <span class="en">Version <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; Android 14+</span>
+      </p>
+
+      <p class="started" id="started" hidden>
+        <span class="bn">✓ ডাউনলোড শুরু হয়েছে। শেষ হলে ব্রাউজারের ডাউনলোড (নোটিফিকেশন, অথবা Files → Downloads) থেকে APK-টি খুলে <b>ইনস্টল</b> চাপুন।</span>
+        <span class="en">✓ Download started. When it finishes, open the APK from your browser&rsquo;s downloads (the notification, or Files &rarr; Downloads) and tap <b>Install</b>.</span>
       </p>
 
       <div class="inapp" id="inapp" hidden>
@@ -551,7 +562,7 @@
     <p>
       <a href="https://github.com/Tanvir00ff00/NextVoice-releases/releases"><span class="bn">সব রিলিজ</span><span class="en">All releases</span></a>
       &nbsp;·&nbsp;
-      <a href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/latest/download/nextvoice-latest.apk"><span class="bn">সরাসরি APK লিঙ্ক</span><span class="en">Direct APK link</span></a>
+      <a href="nextvoice-latest.apk" download="NextVoice-1.0.0.apk"><span class="bn">সরাসরি APK লিঙ্ক</span><span class="en">Direct APK link</span></a>
     </p>
     <p style="margin-top:14px">
       <span class="bn">তৈরি করেছেন তানভীর হোসেন · Folyntra Tech Limited</span>
@@ -586,9 +597,10 @@
     document.getElementById('help').open = true;
   }
 
-  // After the download starts, show what to do next; the page stays open behind it.
+  // The file comes from this very site, so the browser downloads it in place and the page
+  // stays open. Say what happens next.
   document.getElementById('get').addEventListener('click', function () {
-    setTimeout(function () { document.getElementById('help').open = true; }, 2500);
+    document.getElementById('started').hidden = false;
   });
 
   document.getElementById('copylink').addEventListener('click', function () {
