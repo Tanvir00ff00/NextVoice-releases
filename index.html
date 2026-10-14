@@ -361,7 +361,7 @@
     </div>
 
     <div class="cta">
-      <a class="btn" id="get" href="nextvoice-latest.apk" download="NextVoice-1.0.0.apk">
+      <a class="btn" id="get" href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/download/v1.1.0/nextvoice-1.1.0.apk" download="NextVoice-1.1.0.apk">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/>
@@ -370,8 +370,8 @@
         <span class="en">Download for Android</span>
       </a>
       <p class="meta">
-        <span class="bn">সংস্করণ <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; অ্যান্ড্রয়েড ১৪+</span>
-        <span class="en">Version <b>1.0.0</b> &nbsp;·&nbsp; 32.6 MB &nbsp;·&nbsp; 29 September 2026 &nbsp;·&nbsp; Android 14+</span>
+        <span class="bn">সংস্করণ <b>1.1.0</b> &nbsp;·&nbsp; 32.7 MB &nbsp;·&nbsp; 14 October 2026 &nbsp;·&nbsp; অ্যান্ড্রয়েড ১৪+</span>
+        <span class="en">Version <b>1.1.0</b> &nbsp;·&nbsp; 32.7 MB &nbsp;·&nbsp; 14 October 2026 &nbsp;·&nbsp; Android 14+</span>
       </p>
 
       <p class="started" id="started" hidden>
@@ -666,7 +666,7 @@
     <p>
       <a href="https://github.com/Tanvir00ff00/NextVoice-releases/releases"><span class="bn">সব রিলিজ</span><span class="en">All releases</span></a>
       &nbsp;·&nbsp;
-      <a href="nextvoice-latest.apk" download="NextVoice-1.0.0.apk"><span class="bn">সরাসরি APK লিঙ্ক</span><span class="en">Direct APK link</span></a>
+      <a href="https://github.com/Tanvir00ff00/NextVoice-releases/releases/download/v1.1.0/nextvoice-1.1.0.apk" download="NextVoice-1.1.0.apk"><span class="bn">সরাসরি APK লিঙ্ক</span><span class="en">Direct APK link</span></a>
     </p>
     <p style="margin-top:14px">
       <span class="bn">তৈরি করেছেন তানভীর হোসেন · Folyntra Tech Limited</span>
@@ -676,7 +676,7 @@
 
 </div>
 
-<div class="dl" id="dl" hidden role="dialog" aria-modal="true" data-state="run" data-mb="32.6">
+<div class="dl" id="dl" hidden role="dialog" aria-modal="true" data-state="run" data-mb="32.7">
   <div class="dlcard">
     <div class="dlring">
       <svg class="rg" viewBox="0 0 120 120" aria-hidden="true">
@@ -824,7 +824,7 @@
   }
 
   document.getElementById('get').addEventListener('click', function (event) {
-    if (!supported || inApp) {
+    if (!supported || inApp || this.origin !== location.origin) {
       document.getElementById('started').hidden = false;
       return;
     }
